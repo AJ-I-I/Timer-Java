@@ -17,13 +17,13 @@ public class TimerProgram {
         try {
             Thread.sleep(totalSeconds * 1000);
 
-            File audioFile = new File("C:/Users/Jones/Downloads/SHADOWWIZARDMONEYGANG.wav");
+            File audioFile = new File("File path");
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(audioFile);
             Clip clip = AudioSystem.getClip();
             clip.open(audioStream);
             clip.start();
 
-            System.out.println("???");
+            System.out.println("END TIMER");
 
             // Wait for the audio to finish playing
             Thread.sleep(clip.getMicrosecondLength() / 1000);
